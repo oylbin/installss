@@ -36,7 +36,7 @@ systemctl restart docker
 
 
 
-if [ ! "$(docker ps -a -q -f name=ss-server)" ]; then
+if [ "$(docker ps -a -q -f name=ss-server)" ]; then
     # cleanup
     docker rm -f ss-server
 fi
