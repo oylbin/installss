@@ -26,6 +26,8 @@ cat > $SS_PATH/server.json <<- EOM
 	"timeout":3600,
 	"method":"$SS_METHOD",
 	"fast_open": true,
+	"plugin": "obfs-server",
+	"plugin_opts": "obfs=tls;failover=bing.com;fast-open"
 }
 EOM
 
