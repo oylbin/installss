@@ -32,9 +32,15 @@ EOM
 #cat  $SS_PATH/server.json
 apt update
 apt install -y docker.io
-systemctl start docker
+systemctl restart docker
 
-docker run -it -v $SS_PATH:/config --name ss-server --net=host -d \
+
+
+if [ ! "$(docker ps -a -q -f name=ss-server)" ]; then
+    # cleanup
+    docker rm -f ss-server
+fi
+docker run -it -d -v $SS_PATH:/config --name ss-server --net=host  \
 	hitian/ss ss-server -c /config/server.json
 
 # netstat -nltp | grep ":$SS_PORT[[:blank:]]"
