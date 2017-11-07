@@ -1,4 +1,4 @@
-使用方法：
+使用方法，在ubuntu 16.04系统下执行以下命令：
 
 1. 安装shadowsocks + obfs (obfs=tls)
 
