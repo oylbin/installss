@@ -1,3 +1,6 @@
+感谢 @hitian 制作的[docker镜像 hitian/ss](https://hub.docker.com/r/hitian/ss/)。
+极大简化了安装配置过程。
+
 使用方法，在ubuntu 16.04系统下执行以下命令：
 
 1. 安装shadowsocks + obfs (obfs=tls)
